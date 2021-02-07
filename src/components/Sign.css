@@ -50,7 +50,29 @@ body, html, .App, #root, .auth-wrapper {
 
 .card-header
 {
-  background-color: rgb(89, 89, 255);
+  background-color: rgb(89, 202, 255);
+}
+
+.card-body
+{
+  text-align: center;
+}
+
+#box2
+{
+  background-color: rgb(89, 202, 255);
+  padding: 1%;
+}
+.myrequest
+{
+  align-items: center;
+}
+
+#box3
+{
+  padding: 1%;
+  margin: 1%;
+  /* margin-left: 1%; */
 }
 
 .auth-wrapper h3 {

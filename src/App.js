@@ -1,12 +1,10 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom'
 import Signup from './components/Signup'
 import Signin from './components/Sign'
-import Home from './components/Home'
-import logo from './logo.svg';
 import './App.css';
 import {firebaseAuth} from './provider/authprovider'
-import HomeN from './components/HomenL'
+import Home from './components/Home';
 
 function App() {
   const { token } = useContext(firebaseAuth)
@@ -17,7 +15,7 @@ function App() {
       <Switch>
         {/* route allows you to render by url path */}
 
-        <Route exact path='/' render={rProps => token === null ? <Signin /> : <HomeN />} />
+        <Route exact path='/' render={rProps => token === null ? <Signin /> : <Home />} />
         <Route exact path='/signin' component={Signin} />
         <Route exact path='/signup' component={Signup} />
       </Switch>
